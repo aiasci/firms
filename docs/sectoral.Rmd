@@ -7,7 +7,9 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
+<div><a href="https://aiasci.github.io/firms">Home Page </a> </div>
+<br>
+<br>
 <div><a href="https://aiasci.github.io/firms/A.html" target="_blank">Agriculture, forestry and fishing </a> </div>
 <div><a href="https://aiasci.github.io/firms/B.html" target="_blank">Mining and quarrying </a> </div>
 <div><a href="https://aiasci.github.io/firms/C.html" target="_blank">Manufacturing </a> </div>

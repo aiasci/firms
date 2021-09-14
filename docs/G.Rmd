@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 source("https://raw.githubusercontent.com/aiasci/firms/master/graphs.R")
 ```
 
-
+<div><a href="https://aiasci.github.io/firms/sectoral.html" target="_blank">Sectoral Reports </a> </div>
 
 # Exports
 

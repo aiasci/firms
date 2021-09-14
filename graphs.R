@@ -141,7 +141,11 @@ graphtype = function(x){
   else if (x == unique(a$code)[28]) 
     paste0("strfl")
   else if (x == unique(a$code)[29]) 
-    paste0("equ")}
+    paste0("equ")
+  else if (x == unique(a$code)[30]) 
+    paste0("ebitda")
+  else if (x == unique(a$code)[31]) 
+    paste0("ebitdad")}
 
 for (i in c(1:length(unique(a$code)))) {
   for (j in firmtype){

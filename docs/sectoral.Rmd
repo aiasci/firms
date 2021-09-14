@@ -1,0 +1,27 @@
+---
+title: "Sectoral Reports"
+author: "Anıl İsmet AŞCI"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<div><a href="https://aiasci.github.io/firms/A.html" target="_blank">Agriculture, forestry and fishing </a> </div>
+<div><a href="https://aiasci.github.io/firms/B.html" target="_blank">Mining and quarrying </a> </div>
+<div><a href="https://aiasci.github.io/firms/C.html" target="_blank">Manufacturing </a> </div>
+<div><a href="https://aiasci.github.io/firms/D.html" target="_blank">Electricity, gas, steam and air conditioning supply </a> </div>
+<div><a href="https://aiasci.github.io/firms/E.html" target="_blank">Water supply; sewerage; waste management and remediation activities </a></div> 
+<div><a href="https://aiasci.github.io/firms/F.html" target="_blank">Construction </a> </div>
+<div><a href="https://aiasci.github.io/firms/G.html" target="_blank">Wholesale and retail trade; repair of motor vehicles and motorcycles </a> </div>
+<div><a href="https://aiasci.github.io/firms/H.html" target="_blank">Transporting and storage </a> </div>
+<div><a href="https://aiasci.github.io/firms/I.html" target="_blank">Accommodation and food service activities </a> </div>
+<div><a href="https://aiasci.github.io/firms/J.html" target="_blank">Information and communication </a> </div>
+<div><a href="https://aiasci.github.io/firms/L.html" target="_blank">Real estate activities </a> </div>
+<div><a href="https://aiasci.github.io/firms/M.html" target="_blank">Professional, scientific and technical activities </a> </div>
+<div><a href="https://aiasci.github.io/firms/N.html" target="_blank">Administrative and support service activities </a> </div>
+<div><a href="https://aiasci.github.io/firms/P.html" target="_blank">Education </a> </div>
+<div><a href="https://aiasci.github.io/firms/Q.html" target="_blank">Human health and social work activities </a> </div>
+<div><a href="https://aiasci.github.io/firms/R.html" target="_blank">Arts, entertainment and recreation </a></div>
+<div><a href="https://aiasci.github.io/firms/S.html" target="_blank">Other services activities </a>    </div>

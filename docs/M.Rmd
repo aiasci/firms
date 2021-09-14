@@ -1,0 +1,179 @@
+---
+title: "M"
+author: "Anıl İsmet AŞCI"
+output:
+ rmdformats::robobook
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+source("https://raw.githubusercontent.com/aiasci/firms/master/graphs.R")
+```
+
+
+
+# Exports
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_exp
+```
+
+
+# Costs
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_gr_gp
+```
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_op
+```
+
+
+# FX
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_fxp
+```
+
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_fxl
+```
+
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_nop
+```
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_nop_s
+```
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_nop_us
+```
+
+
+# Extraordinary
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_nep
+```
+
+
+# EBIT
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_ebit
+```
+
+# Profit
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_p
+```
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_tns
+```
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_nnp
+```
+
+
+# Cash
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_cta
+```
+
+# Inventories
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_ita
+```
+
+# Capital
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_capta
+```
+
+# Receivables
+
+## Trade
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_strta
+```
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_stdta
+```
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_ltrta
+```
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_ltdta
+```
+
+## Other
+
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_sorta
+```
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_sodta
+```
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_lorta
+```
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_lotda
+```
+
+# Financial Debt
+
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_strfl
+```
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_ltrfl
+```
+
+# Equity
+
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_equ
+```
+
+# Capability of paying debt
+
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_ebitda
+```
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_ebitdad
+```
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_cur
+```
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+m_acid
+```
+

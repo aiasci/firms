@@ -6,7 +6,6 @@ library(plotly)
 
 
 a<- data.table(read.csv("https://raw.githubusercontent.com/aiasci/firms/main/other_var.csv"))
-a<- a[,c(2:5)]
 colnames(a)[1] <- "year"
 
 firmtype = c()

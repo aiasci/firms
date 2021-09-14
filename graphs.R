@@ -156,10 +156,10 @@ for (i in c(1:length(unique(a$code)))) {
     c$Small = a[a$name ==  unique(a$name)[j+3]][a[a$name == unique(a$name)[j+3]]$code == unique(a$code)[i]]$data
     assign(paste0(firmsign(j),"_",graphtype(unique(a$code)[i])),
            plot_ly(data=c,type = 'scatter', mod= 'line',mode = 'markers')%>%
-             add_trace(x = ~year,y= ~Large, name = "Large-Sized", mode = "lines+markers", color = "#b2abd2",visible = T)%>%
-             add_trace(x = ~year,y= ~Medium, name = "Medium-Sized", mode = "lines+markers", color = "#b2abd1",visible = T)%>%  
-             add_trace(x = ~year,y= ~Small, name = "Small-Sized", mode = "lines+markers", color = "#b2abd0",visible = T)%>%
-             add_trace(x = ~year,y= ~Micro, name = "Micro-Sized", mode = "lines+markers", color = "#b2abd3",visible = T)%>%
+             add_trace(x = ~year,y= ~Large, name = "Large", mode = "lines+markers", color = "#b2abd2",visible = T)%>%
+             add_trace(x = ~year,y= ~Medium, name = "Medium", mode = "lines+markers", color = "#b2abd1",visible = T)%>%  
+             add_trace(x = ~year,y= ~Small, name = "Small", mode = "lines+markers", color = "#b2abd0",visible = T)%>%
+             add_trace(x = ~year,y= ~Micro, name = "Micro", mode = "lines+markers", color = "#b2abd3",visible = T)%>%
              layout(title = list(text = paste0(unique(a$code)[i],
                                                '<br>',
                                                '<sup>',
@@ -167,7 +167,7 @@ for (i in c(1:length(unique(a$code)))) {
                                                '</sup>')),
                     xaxis=list(title="Year", tickvals= list(2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021)),
                     yaxis=list(title="Percentage"),
-                    annotations = list(x = 0, y = -0.07, text = "Source:CBRT,Author's Calculations", 
+                    annotations = list(x = 0, y = -0.09, text = "Source:CBRT,Author's Calculations", 
                                        showarrow = F, xref='paper', yref='paper', 
                                        xshift=0, yshift=0,
                                        font=list(size=15, color="black"))), 
@@ -181,9 +181,9 @@ for (i in c(1:length(unique(a$code)))) {
   c$Small = a[a$name ==  unique(a$name)[67]][a[a$name == unique(a$name)[67]]$code == unique(a$code)[i]]$data
   assign(paste0("s","_",graphtype(unique(a$code)[i])),
          plot_ly(data=c,type = 'scatter', mod= 'line',mode = 'markers')%>%
-           add_trace(x = ~year,y= ~Medium, name = "Medium-Sized", mode = "lines+markers", color = "#b2abd1",visible = T)%>%  
-           add_trace(x = ~year,y= ~Small, name = "Small-Sized", mode = "lines+markers", color = "#b2abd0",visible = T)%>%
-           add_trace(x = ~year,y= ~Micro, name = "Micro-Sized", mode = "lines+markers", color = "#b2abd3",visible = T)%>%
+           add_trace(x = ~year,y= ~Medium, name = "Medium", mode = "lines+markers", color = "#b2abd1",visible = T)%>%  
+           add_trace(x = ~year,y= ~Small, name = "Small", mode = "lines+markers", color = "#b2abd0",visible = T)%>%
+           add_trace(x = ~year,y= ~Micro, name = "Micro", mode = "lines+markers", color = "#b2abd3",visible = T)%>%
            layout(title = list(text = paste0(unique(a$code)[i],
                                              '<br>',
                                              '<sup>',
@@ -191,7 +191,7 @@ for (i in c(1:length(unique(a$code)))) {
                                              '</sup>')),
                   xaxis=list(title="Year", tickvals= list(2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021)),
                   yaxis=list(title="Percentage"),
-                  annotations = list(x = 0, y = -0.07, text = "Source:CBRT,Author's Calculations", 
+                  annotations = list(x = 0, y = -0.09, text = "Source:CBRT,Author's Calculations", 
                                      showarrow = F, xref='paper', yref='paper', 
                                      xshift=0, yshift=0,
                                      font=list(size=15, color="black"))), 

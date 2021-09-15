@@ -10,3 +10,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 <div><a href="https://aiasci.github.io/firms/sectoral.html" target="_blank">Sectoral Reports </a> </div>
+
+
+<div>
+A while ago, I had stumbled upon a story about an Indian lady who used a microfinance credit for opening a new restaurant just before the pandemic. Although we can foresee the tragic conclusion of this story from the seventeen-word exposition,
+</div>

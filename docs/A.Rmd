@@ -11,16 +11,18 @@ source("https://raw.githubusercontent.com/aiasci/firms/master/graphs.R")
 ```
 
 
-<div><a href="https://aiasci.github.io/firms/sectoral.html" target="_blank">Sectoral Reports </a> </div>
+<div><a href="https://aiasci.github.io/firms/sectoral.html">Sectoral Reports </a> </div>
 
-# Exports
+# Income Statment
+
+## Exports
 
 ```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
 a_exp
 ```
 
 
-# Costs
+## Costs
 
 ```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
 a_gr_gp
@@ -31,7 +33,7 @@ a_op
 ```
 
 
-# FX
+## FX
 
 ```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
 a_fxp
@@ -56,20 +58,20 @@ a_nop_us
 ```
 
 
-# Extraordinary
+## Extraordinary
 
 ```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
 a_nep
 ```
 
 
-# EBIT
+## EBIT
 
 ```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
 a_ebit
 ```
 
-# Profit
+## Profit
 
 ```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
 a_p
@@ -84,27 +86,66 @@ a_nnp
 ```
 
 
-# Cash
+# Balance Sheet
+
+## Cash
 
 ```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
 a_cta
 ```
 
-# Inventories
+## Inventories
 
 ```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
 a_ita
 ```
 
-# Capital
+## Capital
 
 ```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
 a_capta
 ```
 
-# Receivables
+### Proportion of Tangible Goods
 
-## Trade
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+fig_a_l
+```
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+fig_a_m
+```
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+fig_a_s
+```
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+fig_a_mm
+```
+
+### Proportion of Tangible Goods 2
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+fig_a_l_1
+```
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+fig_a_m_1
+```
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+fig_a_s_1
+```
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+fig_a_mm_1
+```
+
+
+## Receivables
+
+### Trade
 
 ```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
 a_strta
@@ -122,7 +163,7 @@ a_ltrta
 a_ltdta
 ```
 
-## Other
+### Other
 
 
 ```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
@@ -141,7 +182,7 @@ a_lorta
 a_lotda
 ```
 
-# Financial Debt
+## Financial Debt
 
 
 ```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
@@ -152,7 +193,7 @@ a_strfl
 a_ltrfl
 ```
 
-# Equity
+## Equity
 
 
 ```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}

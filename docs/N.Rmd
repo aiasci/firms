@@ -10,16 +10,19 @@ knitr::opts_chunk$set(echo = TRUE)
 source("https://raw.githubusercontent.com/aiasci/firms/master/graphs.R")
 ```
 
-<div><a href="https://aiasci.github.io/firms/sectoral.html" target="_blank">Sectoral Reports </a> </div>
 
-# Exports
+<div><a href="https://aiasci.github.io/firms/sectoral.html">Sectoral Reports </a> </div>
+
+# Income Statment
+
+## Exports
 
 ```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
 n_exp
 ```
 
 
-# Costs
+## Costs
 
 ```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
 n_gr_gp
@@ -30,7 +33,7 @@ n_op
 ```
 
 
-# FX
+## FX
 
 ```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
 n_fxp
@@ -55,20 +58,20 @@ n_nop_us
 ```
 
 
-# Extraordinary
+## Extraordinary
 
 ```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
 n_nep
 ```
 
 
-# EBIT
+## EBIT
 
 ```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
 n_ebit
 ```
 
-# Profit
+## Profit
 
 ```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
 n_p
@@ -83,27 +86,66 @@ n_nnp
 ```
 
 
-# Cash
+# Balance Sheet
+
+## Cash
 
 ```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
 n_cta
 ```
 
-# Inventories
+## Inventories
 
 ```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
 n_ita
 ```
 
-# Capital
+## Capital
 
 ```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
 n_capta
 ```
 
-# Receivables
+### Proportion of Tangible Goods
 
-## Trade
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+fig_n_l
+```
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+fig_n_m
+```
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+fig_n_s
+```
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+fig_n_mm
+```
+
+### Proportion of Tangible Goods 2
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+fig_n_l_1
+```
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+fig_n_m_1
+```
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+fig_n_s_1
+```
+
+```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
+fig_n_mm_1
+```
+
+
+## Receivables
+
+### Trade
 
 ```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
 n_strta
@@ -121,7 +163,7 @@ n_ltrta
 n_ltdta
 ```
 
-## Other
+### Other
 
 
 ```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
@@ -140,7 +182,7 @@ n_lorta
 n_lotda
 ```
 
-# Financial Debt
+## Financial Debt
 
 
 ```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}
@@ -151,7 +193,7 @@ n_strfl
 n_ltrfl
 ```
 
-# Equity
+## Equity
 
 
 ```{r warning=FALSE,error=FALSE,message=FALSE,echo=FALSE}

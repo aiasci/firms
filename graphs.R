@@ -160,7 +160,7 @@ for (i in c(1:length(unique(a$code)))) {
              add_trace(x = ~year,y= ~Medium, name = "Medium", mode = "lines+markers", color = "#b2abd1",visible = T)%>%  
              add_trace(x = ~year,y= ~Small, name = "Small", mode = "lines+markers", color = "#b2abd0",visible = T)%>%
              add_trace(x = ~year,y= ~Micro, name = "Micro", mode = "lines+markers", color = "#b2abd3",visible = T)%>%
-             layout(title = list(text = paste0(unique(a$code)[i],
+             layout(legend = list(orientation = 'h'),title = list(text = paste0(unique(a$code)[i],
                                                '<br>',
                                                '<sup>',
                                                firmname(j),
@@ -184,7 +184,7 @@ for (i in c(1:length(unique(a$code)))) {
            add_trace(x = ~year,y= ~Medium, name = "Medium", mode = "lines+markers", color = "#b2abd1",visible = T)%>%  
            add_trace(x = ~year,y= ~Small, name = "Small", mode = "lines+markers", color = "#b2abd0",visible = T)%>%
            add_trace(x = ~year,y= ~Micro, name = "Micro", mode = "lines+markers", color = "#b2abd3",visible = T)%>%
-           layout(title = list(text = paste0(unique(a$code)[i],
+           layout(legend = list(orientation = 'h'),title = list(text = paste0(unique(a$code)[i],
                                              '<br>',
                                              '<sup>',
                                              "S-Other services activities",
@@ -197,4 +197,138 @@ for (i in c(1:length(unique(a$code)))) {
                                      font=list(size=15, color="black"))), 
          envir = .GlobalEnv)
 }  
+
+
+
+a<- data.table(read.csv("https://raw.githubusercontent.com/aiasci/firms/main/other_var_2.csv"))
+colnames(a)[1] <- "year"
+
+firmsign2 = function(x){
+  if (x>=1 & x<5) 
+    paste0("a")
+  else if (x>=5 & x<9)
+    paste0("b")
+  else if (x>=9 & x<13)
+    paste0("c")
+  else if (x>=13 & x<17)
+    paste0("d")
+  else if (x>=17 & x<21)
+    paste0("e")
+  else if (x>=21 & x<25)
+    paste0("f")
+  else if (x>=25 & x<29)
+    paste0("g")
+  else if (x>=29 & x<33)
+    paste0("h")
+  else if (x>=33 & x<37)
+    paste0("i")
+  else if (x>=37 & x<41)
+    paste0("j")
+  else if (x>=41 & x<45)
+    paste0("l")
+  else if (x>=45 & x<49)
+    paste0("m")
+  else if (x>=49 & x<53)
+    paste0("n")
+  else if (x>=53 & x<57)
+    paste0("p")
+  else if (x>=57 & x<61)
+    paste0("q")
+  else if (x>=61 & x<65)
+    paste0("r")
+  else if (x>=65)
+    paste0("s")
+}
+
+firmsize = function(x){
+  if (x%%4 ==1)
+    paste0("l")
+  else if (x%%4 ==2)
+    paste0("m")
+  else if (x%%4 ==3)
+    paste0("mm")
+  else if (x%%4 ==0)
+    paste0("s")
+}
+
+for (i in c(1:length(unique(a$name)))){
+  c= data.table()
+  c$year = a[a$name ==   unique(a$name)[i]][a[a$name == unique(a$name)[i]]$code == unique(a$code)[1]]$year[1:11]
+  c$Land = a[a$name == unique(a$name)[i]][a[a$name == unique(a$name)[i]]$code == unique(a$code)[1]]$data[1:11]
+  c$LandI = a[a$name ==  unique(a$name)[i]][a[a$name == unique(a$name)[i]]$code == unique(a$code)[2]]$data[1:11]
+  c$Buildings = a[a$name ==  unique(a$name)[i]][a[a$name == unique(a$name)[i]]$code == unique(a$code)[3]]$data[1:11]
+  c$Machinery = a[a$name == unique(a$name)[i]][a[a$name == unique(a$name)[i]]$code == unique(a$code)[4]]$data[1:11]
+  c$Motor = a[a$name ==  unique(a$name)[i]][a[a$name == unique(a$name)[i]]$code == unique(a$code)[5]]$data[1:11]
+  c$Furniture = a[a$name ==  unique(a$name)[i]][a[a$name == unique(a$name)[i]]$code == unique(a$code)[6]]$data[1:11]
+  c$Other = a[a$name == unique(a$name)[i]][a[a$name == unique(a$name)[i]]$code == unique(a$code)[7]]$data[1:11]
+  c$Depreciation = a[a$name == unique(a$name)[i]][a[a$name == unique(a$name)[i]]$code == unique(a$code)[8]]$data[1:11]
+  c$Cons = a[a$name == unique(a$name)[i]][a[a$name == unique(a$name)[i]]$code == unique(a$code)[9]]$data[1:11]
+  c$Advances = a[a$name == unique(a$name)[i]][a[a$name == unique(a$name)[i]]$code == unique(a$code)[10]]$data[1:11]
+  c[, re := (1+Depreciation/100-Cons/100-Advances/100)*100]
+  c[, Land := Land/re*100]
+  c[, LandI := LandI/re*100]
+  c[, Buildings := Buildings/re*100]
+  c[, Machinery:= Machinery/re*100]
+  c[, Motor := Motor/re*100]
+  c[, Furniture := Furniture/re*100]
+  c[, Other := Other/re*100]
+  assign(paste0("fig_",firmsign2(i),"_",firmsize(i)),
+         plot_ly(data=c,type = 'scatter', mod= 'line',mode = 'markers')%>%
+           add_trace(x = ~year,y= ~Land, name = "Land", mode = "lines+markers", color = "#b2abd1",visible = T)%>%  
+           add_trace(x = ~year,y= ~LandI, name = "Land Improvments", mode = "lines+markers", color = "#b2abd0",visible = T)%>%
+           add_trace(x = ~year,y= ~Buildings, name = "Buildings", mode = "lines+markers", color = "#b2abd3",visible = T)%>%
+           add_trace(x = ~year,y= ~Machinery, name = "Machinery,Plant & Equipments", mode = "lines+markers", color = "#b2abd4",visible = T)%>%  
+           add_trace(x = ~year,y= ~Motor, name = "Motor Vehicles" , mode = "lines+markers", color = "#b2abd5",visible = T)%>%
+           add_trace(x = ~year,y= ~Furniture, name = "Furniture & Fixtures" , mode = "lines+markers", color = "#b2abd6",visible = T)%>%
+           add_trace(x = ~year,y= ~Other, name = "Other Tangible Assets" , mode = "lines+markers", color = "#b2abd7",visible = T)%>%  
+           layout(legend = list(orientation = 'h'),title = list(text = paste0("Proportion of Tangible Assets",
+                                                                              '<br>',
+                                                                              '<sup>',
+                                                                              unique(a$name)[i],
+                                                                              '</sup>')),
+                  xaxis=list(title="Year", tickvals= list(2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021)),
+                  yaxis=list(title="Percentage"),
+                  annotations = list(x = 0, y = -0.09, text = "Source:CBRT,Author's Calculations", 
+                                     showarrow = F, xref='paper', yref='paper', 
+                                     xshift=0, yshift=0,
+                                     font=list(size=15, color="black"))), 
+         envir = .GlobalEnv)
+}
+
+
+for (i in c(1:length(unique(a$name)))){
+  c= data.table()
+  c$year = a[a$name ==   unique(a$name)[i]][a[a$name == unique(a$name)[i]]$code == unique(a$code)[1]]$year[1:11]
+  c$Depreciation = a[a$name == unique(a$name)[i]][a[a$name == unique(a$name)[i]]$code == unique(a$code)[8]]$data[1:11]
+  c$Cons = a[a$name == unique(a$name)[i]][a[a$name == unique(a$name)[i]]$code == unique(a$code)[9]]$data[1:11]
+  c$Advances = a[a$name == unique(a$name)[i]][a[a$name == unique(a$name)[i]]$code == unique(a$code)[10]]$data[1:11]
+  c[, re := (1+Depreciation/100-Cons/100-Advances/100)*100]
+  c[, Depreciation := Depreciation/re*100]
+  c[, Cons := Cons/re*100]
+  c[, Advances := Advances/re*100]
+  assign(paste0("fig_",firmsign2(i),"_",firmsize(i),"_1"),
+         plot_ly(data=c,type = 'scatter', mod= 'line',mode = 'markers')%>%
+           add_trace(x = ~year,y= ~Depreciation, name = "Accumulated Depreciation", mode = "lines+markers", color = "#b2abd1",visible = T)%>%  
+           add_trace(x = ~year,y= ~Cons, name = "Assets in Construction", mode = "lines+markers", color = "#b2abd0",visible = T)%>%
+           add_trace(x = ~year,y= ~Advances, name = "Advances Paid", mode = "lines+markers", color = "#b2abd3",visible = T)%>%
+           layout(legend = list(orientation = 'h'),title = list(text = paste0("Proportion of Tangible Assets",
+                                                                              '<br>',
+                                                                              '<sup>',
+                                                                              unique(a$name)[i],
+                                                                              '</sup>')),
+                  xaxis=list(title="Year", tickvals= list(2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021)),
+                  yaxis=list(title="Percentage"),
+                  annotations = list(x = 0, y = -0.09, text = "Source:CBRT,Author's Calculations", 
+                                     showarrow = F, xref='paper', yref='paper', 
+                                     xshift=0, yshift=0,
+                                     font=list(size=15, color="black"))), 
+         envir = .GlobalEnv)
+}
+
+
+
+
+
+
+
 
